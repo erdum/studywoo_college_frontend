@@ -1,2 +1,1 @@
-# studywoo_college_frontend
-### Developed using Tailwindcss
+# All Rights Reserved Studywoo Private Limited
