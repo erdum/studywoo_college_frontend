@@ -1,0 +1,284 @@
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+<link rel="stylesheet" type="text/css" href="./output.css">
+
+<body class="bg-gray-200">
+    <section class="
+        w-full
+        h-full
+        my-32
+        mx-0
+        px-4
+        flex
+        justify-start
+        items-start
+        ">
+        <!-- =========================================== SIDEBAR ================================  -->
+        <aside class="
+            hidden
+            w-3/12
+            mr-4
+            shadow-lg
+            bg-white
+            flex
+            flex-column
+            justify-center
+            rounded
+            text-sm
+            
+            md:block
+            ">
+            <div class="p-4 text-gray-400">
+                Found <span class="text-gray-700">N</span> Colleges
+            </div>
+            <div data-collapse="true" onclick="handleFilterListClick(event);" class="
+                px-4
+                py-3
+                flex
+                justify-between
+                items-center
+                bg-gray-200
+                text-gray-700
+                relative
+                cursor-pointer
+
+                before:absolute
+                before:left-0
+                before:top-0
+                before:h-full
+                before:w-1
+                before:bg-amber-400
+            ">
+                $Stream
+                <i class="fas fa-angle-up rotate-180 text-2xl font-light transition-all duration-200 ease-out"></i>
+            </div>
+            <div class="
+                flex
+                flex-col
+                items-center
+                justify-start
+                py-2
+                px-4
+                overflow-hidden
+            ">
+                <div class="
+                    w-full
+                    flex
+                    items-center
+                    justify-between
+                    border
+                    border-gray-400
+                    px-2
+                    py-1
+                    text-gray-700
+                    my-2
+                ">
+                    <i class="fas fa-search mr-4 text-gray-400"></i>
+                    <input class="w-full focus:outline-none" type="text" name="$" placeholder="Search $">
+                </div>
+                <ul class="
+                    w-full
+                    flex
+                    flex-col
+                    items-center
+                    justify-start
+                    my-2
+                    text-gray-500
+                ">
+                    <li class="w-full">
+                        <a href="#" class="
+                            w-full
+                            flex
+                            items-center
+                            justify-start
+                            mb-2
+                            cursor-pointer
+                            hover:text-orange-400
+                        ">
+                            <i class="far fa-square mr-4"></i>
+                            $Engineering - [N]
+                        </a>
+                    </li>
+                    <li class="w-full">
+                        <a href="#" class="
+                            w-full
+                            flex
+                            items-center
+                            justify-start
+                            mb-2
+                            cursor-pointer
+                            hover:text-orange-400
+                        ">
+                            <i class="far fa-square mr-4"></i>
+                            $Engineering - [N]
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        <!-- ============================ SIDEBAR END ===================== -->
+        <!-- ============================ DATA FEED ======================== -->
+        <section class="
+            w-full
+            flex
+            flex-col
+            items-center
+            justify-evenly
+            flex-wrap
+            
+            md:w-9/12
+            md:flex-row
+            ">
+            <!-- ====================== SORT BAR ==================== -->
+            <div class="
+                w-full
+                h-12
+                bg-white
+                shadow-lg
+                mb-4
+                rounded-sm
+                flex
+                hidden
+                items-center
+                justify-end
+                px-4
+                text-gray-400
+
+                md:flex
+            ">
+                <p class="mr-auto text-gray-700 text-md">Sort By</p>
+                <a href="#" class="mx-4 text-sm hover:text-orange-400">Highest Fees <i class="fas fa-sort-amount-up"></i></a>
+                <a href="#" class="mx-4 text-sm hover:text-orange-400">Lowest Fees <i class="fas fa-sort-amount-up"></i></a>
+                <a href="#" class="mx-4 text-sm text-orange-500 border-b-2 border-orange-500 pb-2">Rating <i class="fas fa-sort-amount-up"></i></a>
+            </div>
+            <article class="
+                w-full
+                my-8
+                flex
+                flex-col
+                items-center
+                justify-start
+                shadow-lg
+                border
+                border-slate-300
+                bg-white
+                
+                md:w-72
+                ">
+                <div class="w-full flex flex-col items-start justify-around px-4 py-2 bg-teal-400 text-white text-xs">
+                    <h5 class="font-extrabold pb-2 text-sm h-8 w-4/5 truncate">UBIT - Umair Bhasha Institute Of Technology</h5>
+                    <h6>
+                        <i class="fas fa-map-marker-alt"></i>
+                        Karachi, Pakistan
+                    </h6>
+                </div>
+                <div class="w-full relative">
+                    <img src="index.jpeg" class="w-full h-36">
+                    <span class="w-10 h-10 rounded-full bg-white absolute right-4 top-4 flex items-center justify-center text-teal-400 text-xs">5/5</span>
+                </div>
+                <a href="" class="
+                    w-full
+                    flex
+                    flex-col
+                    items-center
+                    justify-start
+                    text-gray-700
+                    ">
+                    <div class="
+                        w-full
+                        flex
+                        items-center
+                        justify-between
+                        px-2
+                        pt-2
+                        ">
+                        <p class="w-44 truncate text-sm">MBA - Master Of Business Administration</p>
+                        <small class="text-teal-400"> &#8377; 2,300,000</small>
+                    </div>
+                    <div class="
+                        w-full
+                        flex
+                        items-center
+                        justify-between
+                        px-2
+                        pb-2
+                        text-xs
+                        ">
+                        <small>29 Courses</small>
+                        <small>Total Fees</small>
+                    </div>
+                </a>
+                <a href="" class="
+                    w-full
+                    flex
+                    flex-col
+                    items-center
+                    justify-start
+                    text-gray-700
+                    ">
+                    <div class="
+                        w-full
+                        flex
+                        items-center
+                        justify-between
+                        px-2
+                        pt-2
+                        ">
+                        <p class="w-44 truncate text-sm">MBA - Master Of Business Administration</p>
+                        <small class="text-teal-400"> &#8377; 2,300,000</small>
+                    </div>
+                    <div class="
+                        w-full
+                        flex
+                        items-center
+                        justify-between
+                        px-2
+                        pb-2
+                        text-xs
+                        ">
+                        <small>29 Courses</small>
+                        <small>Total Fees</small>
+                    </div>
+                </a>
+                <a href="" class="w-full p-2 border-y border-slate-300 flex flex-col items-start justify-evenly">
+                    <p class="text-sm text-gray-800">Reviews - 147</p>
+                    <p class="text-xs text-gray-800 pt-2 w-full truncate">This is the most advance institute in the world in terms of education</p>
+                    <small class="text-xs text-teal-400">Read more</small>
+                </a>
+                <p class="py-3 text-xs text-orange-400 italic font-semibold"><i class="fas fa-medal px-2 text-lg"></i>Studywoo Recomended</p>
+                <a href="" class="w-full h-11 bg-teal-400 text-white text-md font-semibold flex items-center justify-center">Apply Now</a>
+            </article>
+        </section>
+        <!-- =============================== DATA FEED END =========================== -->
+    </section>
+    <script type="text/javascript">
+    const bg = () => {
+        return Math.floor(Math.random() * 16777215).toString(16);
+    };
+
+    const rotateIcon = (elm, icon) => {
+        const nextElm = elm.nextElementSibling;
+        if (elm.getAttribute('data-collapse') === 'false') {
+            icon.classList.add('rotate-180');
+            nextElm.classList.remove('hidden');
+            elm.setAttribute('data-collapse', 'true');
+        } else {
+            icon.classList.remove('rotate-180');
+            nextElm.classList.add('hidden');
+            elm.setAttribute('data-collapse', 'false');
+        }
+    }
+
+    const handleFilterListClick = (event) => {
+        let elm = event.target;
+
+        if (elm.tagName === 'DIV') {
+            const icon = elm.children[0];
+            rotateIcon(elm, icon);
+        } else if (elm.tagName === 'I') {
+            const icon = elm;
+            elm = elm.parentElement;
+            rotateIcon(elm, icon);
+        }
+    }
+    </script>
+</body>

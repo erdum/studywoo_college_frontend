@@ -1,0 +1,323 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./blog-post.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body id="top">
+    <section class="
+		w-full
+		p-6
+	">
+        <article class="
+			w-full
+			flex
+			flex-col
+			items-center
+		">
+            <div class="
+				w-full
+				my-4
+				mb-12
+
+				md:my-8
+			">
+                <h1 class="
+					w-full
+					text-black
+					text-4xl
+					font-medium
+					text-center
+
+					md:text-5xl
+				">Post Title</h1>
+                <time class="
+					inline-block
+					w-full
+					text-center
+					text-gray-500
+					my-2
+
+					md:my-4
+				">17 feb 2022</time>
+            </div>
+            {!! html_entity_decode($body) !!}
+            <!--                        USER Data Required here                         -->
+            <div class="
+				w-full
+				flex
+				flex-col
+				items-center
+				justify-start
+				my-20
+			">
+                <img class="
+					w-16
+					h-16
+					rounded-full
+
+					md:w-24
+					md:h-24
+				" src="https://cdn3.iconfinder.com/data/icons/avatars-round-flat/33/avat-01-512.png" alt="">
+                <h4 class="
+                	text-black
+                	my-6
+                	font-medium
+                	text-lg
+
+                	md:text-2xl
+                ">
+                    <a href="#0">Erdum Adnan</a>
+                </h4>
+                <p class="
+                	w-full
+                	text-center
+                	text-gray-600
+                	leading-7
+
+                	md:w-4/5
+
+                	lg:w-3/5
+                ">Alias aperiam at debitis deserunt dignissimos dolorem doloribus, fuga fugiat impedit laudantium magni maxime nihil nisi quidem quisquam sed ullam voluptas voluptatum. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </p>
+                <!--<ul class="s-content__author-social">-->
+                <!--   <li><a href="#0">Facebook</a></li>-->
+                <!--   <li><a href="#0">Twitter</a></li>-->
+                <!--   <li><a href="#0">GooglePlus</a></li>-->
+                <!--   <li><a href="#0">Instagram</a></li>-->
+                <!--</ul>-->
+            </div>
+            <div class="
+            	w-full
+            	flex
+            	flex-col
+            	items-center
+            	justify-between
+            	divide-y
+            	border-y
+
+            	md:w-4/5
+            ">
+                <a href="#0" rel="prev" class="
+                	w-full
+                	py-4
+                	my-1
+                	flex
+                	items-center
+                	justify-between
+                	text-gray-800
+
+                	md:py-6
+                	md:text-xl
+                ">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    <p>
+                        Tips on Minimalist Design
+                    </p>
+                </a>
+                <a href="#0" rel="next" class="
+                	w-full
+                	py-4
+                	my-1
+                	flex
+                	items-center
+                	justify-between
+                	text-gray-800
+
+                	md:py-6
+                	md:text-xl
+                ">
+                    <p>
+                        Less Is More
+                    </p>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </article>
+    </section>
+    <section class="
+		w-full
+		flex
+		flex-col
+		items-start
+		justify-start
+		bg-gray-100
+		p-6
+
+		md:px-20
+		lg:px-48
+	">
+        <h3 class="
+			font-medium
+			font-black
+			text-3xl
+			my-16
+			w-full
+			text-center
+
+			md:text-left
+		">
+            2 Comments
+        </h3>
+        <ol class="
+			my-8
+			w-full
+		">
+            <li class="
+				mb-8
+				border-t
+				border-gray-300
+				pt-4
+			">
+                <div class="
+					w-full
+					flex
+					items-center
+					justify-start
+					mb-7
+				">
+                    <img class="rounded-full" width="50" height="50" src='https://ui-avatars.com/api/?name=Erdum+Adnan'>
+                    <div class="
+						flex
+						flex-col
+						ml-4
+					">
+                        <cite class="font-medium">Erdum Adnan</cite>
+                        <time class="font-light text-sm text-gray-600 mt-1">16 feb 2022</time>
+                    </div>
+                </div>
+                <p class="text-gray-600 leading-7">Never quit keep trying learn from every failure believe on Allah and on your self.</p>
+            </li>
+            <li class="
+				my-8
+				border-t
+				border-gray-300
+				pt-4
+			">
+                <div class="
+					w-full
+					flex
+					items-center
+					justify-start
+					mb-7
+				">
+                    <img class="rounded-full" width="50" height="50" src='https://ui-avatars.com/api/?name=Erdum+Adnan'>
+                    <div class="
+						flex
+						flex-col
+						ml-4
+					">
+                        <cite class="font-medium">Erdum Adnan</cite>
+                        <time class="font-light text-sm text-gray-600 mt-1">16 feb 2022</time>
+                    </div>
+                </div>
+                <div class="w-full flex items-center justify-start my-4">
+                    <i class="fa-solid fa-star mr-2 text-yellow-400"></i>
+                    <i class="fa-solid fa-star mr-2 text-yellow-400"></i>
+                    <i class="fa-solid fa-star mr-2 text-yellow-400"></i>
+                    <i class="fa-solid fa-star mr-2 text-yellow-400"></i>
+                    <i class="fa-solid fa-star mr-2 text-yellow-400"></i>
+                </div>
+                <p class="text-gray-600 leading-7 before:content-['\201C'] before:text-xl before:mr-1 after:content-['\201D'] after:text-xl after:ml-1">Never quit keep trying learn from every failure believe on Allah and on your self.</p>
+            </li>
+        </ol>
+        <!-- end commentlist 
+	
+	
+						 respond
+						================================================== -->
+        <div class="
+			w-full
+			flex
+			flex-col
+			items-center
+			justify-start
+			my-12
+		">
+            <h3 class="
+				font-medium
+				font-black
+				text-3xl
+				my-16
+				w-full
+				text-center
+
+				md:text-left
+			">
+                Add Comment
+            </h3>
+            <form class="w-full" method="post" enctype="application/x-www-form-urlencoded" action="#">
+                <input type="hidden" name="posted_on" value="first-post">
+                <input type="hidden" name="posted_by" value="1">
+                <fieldset class="
+					w-full
+					flex
+					flex-col
+					items-center
+					justify-start
+				">
+                    <input class="w-full py-2 border-b-2 border-gray-600 bg-transparent mb-6 focus:outline-none" type="text" name="name" placeholder="Your Name" required>
+                    <input class="w-full py-2 border-b-2 border-gray-600 bg-transparent mb-6 focus:outline-none" type="text" name="email" placeholder="Your Email" required>
+                    <div class="w-full">
+                        <textarea class="h-32 w-full border-gray-600 border-b-2 bg-transparent mb-6 focus:outline-none" name="body" id="cMessage" class="" placeholder="Your Comment" required></textarea>
+                    </div>
+                    <button class="w-full py-2 bg-black text-white rounded" type="submit" class="">Submit</button>
+                </fieldset>
+            </form> <!-- end form -->
+        </div> <!-- end respond -->
+        <div class="
+			w-full
+			flex
+			flex-col
+			items-center
+			justify-start
+			my-12
+		">
+            <h3 class="
+				font-medium
+				font-black
+				text-3xl
+				my-16
+				w-full
+				text-center
+
+				md:text-left
+			">
+                Write Review
+            </h3>
+            <form class="w-full" method="post" enctype="application/x-www-form-urlencoded" action="#">
+                <input type="hidden" name="posted_on" value="first-post">
+                <input type="hidden" name="posted_by" value="1">
+                <input id="rating-value" type="hidden" name="rating" value="0">
+                <fieldset class="
+					w-full
+					flex
+					flex-col
+					items-center
+					justify-start
+				">
+                    <input class="w-full py-2 border-b-2 border-gray-600 bg-transparent mb-6 focus:outline-none" type="text" name="name" placeholder="Your Name" required>
+                    <input class="w-full py-2 border-b-2 border-gray-600 bg-transparent mb-6 focus:outline-none" type="text" name="email" placeholder="Your Email" required>
+                    <div class="w-full">
+                        <textarea class="h-32 w-full border-gray-600 border-b-2 bg-transparent mb-6 focus:outline-none" name="body" id="cMessage" class="" placeholder="Your Review" required></textarea>
+                    </div>
+                    <div id="set-rating" onclick="handleSetRating(event)" class="w-full flex items-center justify-center mt-4 mb-12 lg:mt-8 lg:mb-16">
+                        <i data-index="0" title="1/5" class="fa-regular fa-star mx-2 text-3xl cursor-pointer md:text-4xl md:mx-6 lg:mx-10"></i>
+                        <i data-index="1" title="2/5" class="fa-regular fa-star mx-2 text-3xl cursor-pointer md:text-4xl md:mx-6 lg:mx-10"></i>
+                        <i data-index="2" title="3/5" class="fa-regular fa-star mx-2 text-3xl cursor-pointer md:text-4xl md:mx-6 lg:mx-10"></i>
+                        <i data-index="3" title="4/5" class="fa-regular fa-star mx-2 text-3xl cursor-pointer md:text-4xl md:mx-6 lg:mx-10"></i>
+                        <i data-index="4" title="5/5" class="fa-regular fa-star mx-2 text-3xl cursor-pointer md:text-4xl md:mx-6 lg:mx-10"></i>
+                    </div>
+                    <button class="w-full py-2 bg-black text-white rounded" type="submit" class="">Submit</button>
+                </fieldset>
+            </form> <!-- end form -->
+        </div> <!-- end respond -->
+    </section> <!-- end comments-wrap -->
+    <script type="text/javascript" src="./rating.js"></script>
+</body>
+
+</html>

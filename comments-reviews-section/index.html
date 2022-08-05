@@ -1,0 +1,221 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <section class="
+		w-full
+		flex
+		flex-col
+		items-start
+		justify-start
+		bg-gray-100
+		p-6
+
+		md:px-20
+		lg:px-48
+	">
+        <h3 class="
+			font-medium
+			font-black
+			text-3xl
+			my-16
+			w-full
+			text-center
+
+			md:text-left
+		">
+            2 Comments
+        </h3>
+        <ol class="
+			my-8
+			w-full
+		">
+            <li class="
+				mb-8
+				border-t
+				border-gray-300
+				pt-4
+			">
+                <div class="
+					w-full
+					flex
+					items-center
+					justify-start
+					mb-7
+				">
+                    <img class="rounded-full" width="50" height="50" src='https://ui-avatars.com/api/?name=Erdum+Adnan'>
+                    <div class="
+						flex
+						flex-col
+						ml-4
+					">
+                        <cite class="font-medium">Erdum Adnan</cite>
+                        <time class="font-light text-sm text-gray-600 mt-1">16 feb 2022</time>
+                    </div>
+                </div>
+                <p class="text-gray-600 leading-7">Never quit keep trying learn from every failure believe on Allah and on your self.</p>
+            </li>
+            <li class="
+				my-8
+				border-t
+				border-gray-300
+				pt-4
+			">
+                <div class="
+					w-full
+					flex
+					items-center
+					justify-start
+					mb-7
+				">
+                    <img class="rounded-full" width="50" height="50" src='https://ui-avatars.com/api/?name=Erdum+Adnan'>
+                    <div class="
+						flex
+						flex-col
+						ml-4
+					">
+                        <cite class="font-medium">Erdum Adnan</cite>
+                        <time class="font-light text-sm text-gray-600 mt-1">16 feb 2022</time>
+                    </div>
+                </div>
+                <div class="w-full flex items-center justify-start my-4">
+                    <i class="fa-solid fa-star mr-2 text-yellow-400"></i>
+                    <i class="fa-solid fa-star mr-2 text-yellow-400"></i>
+                    <i class="fa-solid fa-star mr-2 text-yellow-400"></i>
+                    <i class="fa-solid fa-star mr-2 text-yellow-400"></i>
+                    <i class="fa-solid fa-star mr-2 text-yellow-400"></i>
+                </div>
+                <p class="text-gray-600 leading-7 before:content-['\201C'] before:text-xl before:mr-1 after:content-['\201D'] after:text-xl after:ml-1">Never quit keep trying learn from every failure believe on Allah and on your self.</p>
+            </li>
+        </ol>
+        <!-- end commentlist 
+	
+	
+						 respond
+						================================================== -->
+        <div class="
+			w-full
+			flex
+			flex-col
+			items-center
+			justify-start
+			my-12
+		">
+            <h3 class="
+				font-medium
+				font-black
+				text-3xl
+				my-16
+				w-full
+				text-center
+
+				md:text-left
+			">
+                Add Comment
+            </h3>
+            <form class="w-full" method="post" enctype="application/x-www-form-urlencoded" action="#">
+                <input type="hidden" name="posted_on" value="first-post">
+                <input type="hidden" name="posted_by" value="1">
+                <fieldset class="
+					w-full
+					flex
+					flex-col
+					items-center
+					justify-start
+				">
+                    <input class="w-full py-2 border-b-2 border-gray-600 bg-transparent mb-6 focus:outline-none" type="text" name="name" placeholder="Your Name" required>
+                    <input class="w-full py-2 border-b-2 border-gray-600 bg-transparent mb-6 focus:outline-none" type="text" name="email" placeholder="Your Email" required>
+                    <div class="w-full">
+                        <textarea class="h-32 w-full border-gray-600 border-b-2 bg-transparent mb-6 focus:outline-none" name="body" id="cMessage" class="" placeholder="Your Comment" required></textarea>
+                    </div>
+                    <button class="w-full py-2 bg-black text-white rounded" type="submit" class="">Submit</button>
+                </fieldset>
+            </form> <!-- end form -->
+        </div> <!-- end respond -->
+        <div class="
+			w-full
+			flex
+			flex-col
+			items-center
+			justify-start
+			my-12
+		">
+            <h3 class="
+				font-medium
+				font-black
+				text-3xl
+				my-16
+				w-full
+				text-center
+
+				md:text-left
+			">
+                Write Review
+            </h3>
+            <form class="w-full" method="post" enctype="application/x-www-form-urlencoded" action="#">
+                <input type="hidden" name="posted_on" value="first-post">
+                <input type="hidden" name="posted_by" value="1">
+                <input id="rating-value" type="hidden" name="rating" value="0">
+                <fieldset class="
+					w-full
+					flex
+					flex-col
+					items-center
+					justify-start
+				">
+                    <input class="w-full py-2 border-b-2 border-gray-600 bg-transparent mb-6 focus:outline-none" type="text" name="name" placeholder="Your Name" required>
+                    <input class="w-full py-2 border-b-2 border-gray-600 bg-transparent mb-6 focus:outline-none" type="text" name="email" placeholder="Your Email" required>
+                    <div class="w-full">
+                        <textarea class="h-32 w-full border-gray-600 border-b-2 bg-transparent mb-6 focus:outline-none" name="body" id="cMessage" class="" placeholder="Your Review" required></textarea>
+                    </div>
+                    <div id="set-rating" onclick="handleSetRating(event)" class="w-full flex items-center justify-center mt-4 mb-12 lg:mt-8 lg:mb-16">
+                        <i data-index="0" title="1/5" class="fa-regular fa-star mx-2 text-3xl cursor-pointer md:text-4xl md:mx-6 lg:mx-10"></i>
+                        <i data-index="1" title="2/5" class="fa-regular fa-star mx-2 text-3xl cursor-pointer md:text-4xl md:mx-6 lg:mx-10"></i>
+                        <i data-index="2" title="3/5" class="fa-regular fa-star mx-2 text-3xl cursor-pointer md:text-4xl md:mx-6 lg:mx-10"></i>
+                        <i data-index="3" title="4/5" class="fa-regular fa-star mx-2 text-3xl cursor-pointer md:text-4xl md:mx-6 lg:mx-10"></i>
+                        <i data-index="4" title="5/5" class="fa-regular fa-star mx-2 text-3xl cursor-pointer md:text-4xl md:mx-6 lg:mx-10"></i>
+                    </div>
+                    <button class="w-full py-2 bg-black text-white rounded" type="submit" class="">Submit</button>
+                </fieldset>
+            </form> <!-- end form -->
+        </div> <!-- end respond -->
+    </section> <!-- end comments-wrap -->
+    <script type="text/javascript">
+    const clearRatingStars = () => {
+        const stars = Array.from(document.getElementById('set-rating').children);
+        stars.forEach((star) => {
+        	star.classList.remove('text-yellow-400');
+        	star.classList.remove('fa-solid');
+        	star.classList.add('fa-regular');
+        });
+    };
+
+    const setRatingStars = (length) => {
+    	const stars = Array.from(document.getElementById('set-rating').children);
+    	stars.forEach((star, index) => {
+    		if (index > length) return false;
+    		star.classList.remove('fa-regular');
+    		star.classList.add('fa-solid');
+    		star.classList.add('text-yellow-400');
+    	});
+    	document.getElementById('rating-value').setAttribute('value', String( Number(length) + 1));
+    };
+
+    const handleSetRating = (event) => {
+        if (event.target.tagName === 'I') {
+            const requestedRating = event.target.getAttribute('data-index') ?? 0;
+	        clearRatingStars();
+	        setRatingStars(requestedRating);
+        }
+    };
+    </script>
+</body>
+
+</html>

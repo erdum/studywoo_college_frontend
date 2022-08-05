@@ -1,0 +1,555 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<style>
+	.appBar {
+		background: linear-gradient(45deg, rgb(67, 116, 185), rgb(238, 66, 79));
+	}
+	</style>
+	<link rel="stylesheet" type="text/css" href="./output.css">
+</head>
+
+<body>
+	<header class="
+		w-screen
+		h-16 flex
+		justify-start
+		items-center
+		px-4
+		relative
+		appBar
+		text-white
+		text-2xl
+
+		sm:h-24
+		sm:px-8
+		sm:text-4xl
+
+		md:hidden
+		">
+		<button onclick="menuHandler(event);" aria-lable="menu"><i class="fas fa-bars"></i></button>
+		<img class="
+				h-12
+				w-32 
+				absolute
+				left-1/2
+				-translate-x-1/2
+
+				sm:h-20
+				sm:w-40
+				" src="logo.png" alt="studywoo.com logo"></img>
+	</header>
+	<aside class="
+		md:hidden
+		z-0
+
+		absolute
+		left-0
+		top-0
+		h-screen
+		w-0
+		bg-teal-300
+		z-10
+		transition-all
+		duration-350
+		ease-out
+	">
+		<nav class="appBar w-full h-full overflow-hidden flex flex-col items-center justify-start text-white font-semibold text-md">
+			<a class="px-4 py-4 pt-12" href="/colleges">Colleges</a>
+			<a class="px-4 py-4" href="/courses">Courses</a>
+			<a class="px-4 py-4" href="/exams">Exams</a>
+			<a class="px-4 py-4" href="/boards">Boards</a>
+			<a class="px-4 py-4" href="/admission">Admission</a>
+			<a class="px-4 py-4" href="/study-abroad">Study Abroad</a>
+			<a class="px-4 py-4" href="/resources">Resources</a>
+			<a class="px-4 py-4" href="/reviews">Reviews</a>
+			<a class="px-4 py-4" href="/news">News</a>
+			<a class="px-4 py-1 bg-teal-500 rounded" href="/write-review">Write a Review</a>
+			<a class="px-4 py-4" href="/login">Login or Signup ?</a>
+		</nav>	
+	</aside>
+	<header class="
+		hidden
+		md:block
+
+		appBar
+		w-screen
+		min-h-max
+		py-1
+	">
+		<nav class="
+			w-full
+			h-full
+			flex
+			items-center
+			justify-end
+			flex-wrap
+			text-white
+			font-semibold
+			text-md
+		">
+			<a class="px-4 py-2" href="/colleges">Colleges</a>
+			<a class="px-4 py-2" href="/courses">Courses</a>
+			<a class="px-4 py-2" href="/exams">Exams</a>
+			<a class="px-4 py-2" href="/boards">Boards</a>
+			<a class="px-4 py-2" href="/admission">Admission</a>
+			<a class="px-4 py-2" href="/study-abroad">Study Abroad</a>
+			<a class="px-4 py-2" href="/resources">Resources</a>
+			<a class="px-4 py-2" href="/reviews">Reviews</a>
+			<a class="px-4 py-2" href="/news">News</a>
+			<a class="px-4 py-1 bg-teal-500 rounded" href="/write-review">Write a Review</a>
+			<a class="px-4 py-2" href="/login">Login or Signup ?</a>
+		</nav>
+	</header>
+
+	<script type="text/javascript">
+
+		const aside = document.querySelector('aside');
+		const asideStyles = getComputedStyle(aside);
+
+		const toggleSidebar = () => {
+			const width = aside.classList.contains('w-52');
+			if (width) {
+				aside.classList.remove('w-52');
+				aside.classList.add('w-0');
+				return true;
+			}
+
+			aside.classList.remove('w-0');
+			aside.classList.add('w-52');
+			return false;
+		};
+
+		document.addEventListener('click', (event) => {
+			if (event.target.tagName === 'HTML' && asideStyles.getPropertyValue('display') === 'block') {
+				toggleSidebar();
+			}
+		});
+
+		const menuHandler = (event) => {
+			toggleSidebar();
+		};
+
+	</script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<header class="header clearfix element_to_stick header_in clearfix primary-bg" style="background-color: gray;">-->
+    <!--    <div class="container-fluid">-->
+    <!--        <div id="logo">-->
+    <!--            <a href="{{ route('homePage') }}">-->
+    <!--                <img src="{{ asset('logo.png') }}" alt="" class="logo logo_normal">-->
+    <!--                <img src="{{ asset('logo.png') }}" alt="" class="logo logo_sticky">-->
+    <!--            </a>-->
+    <!--        </div>-->
+    <!--        @if (auth()->guard('customer')->check())-->
+    <!--        <ul id="top_menu" class="drop_user">-->
+    <!--            <li>-->
+    <!--                <div class="dropdown user clearfix">-->
+    <!--                    <a href="#" data-toggle="dropdown">-->
+    <!--                        <figure><img src="{{ auth()->guard('customer')->user()->customerDetail->avatar }}" alt="">-->
+    <!--                        </figure>-->
+    <!--                        {{ auth()->guard('customer')->user()->customerDetail->full_name }}-->
+    <!--                    </a>-->
+    <!--                    <div class="dropdown-menu">-->
+    <!--                        <div class="dropdown-menu-content">-->
+    <!--                            <ul>-->
+    <!--                                <li><a href="{{ route('profile') }}"><i class="fa fa-user"></i>Profile</a>-->
+    <!--                                </li>-->
+    <!--                                <li><a href="{{ route('review') }}"><i class="icon_document"></i>Review</a>-->
+    <!--                                </li>-->
+
+    <!--                                <li><a href="{{ route('logout') }}"><i class="icon_key"></i>Log out</a>-->
+    <!--                                </li>-->
+    <!--                            </ul>-->
+    <!--                        </div>-->
+    <!--                    </div>-->
+    <!--                </div>-->
+                    <!-- /dropdown -->
+    <!--            </li>-->
+    <!--        </ul>-->
+    <!--        @else-->
+    <!--        <ul id="top_menu">-->
+    <!--            <li><a href="{{ route('login') }}" class="btn_access" style="background-color: white;">Log-->
+    <!--                    In</a></li>-->
+    <!--            <li><a href="{{ route('register') }}" class="btn_access green">Join Free</a></li>-->
+    <!--        </ul>-->
+    <!--        @endif-->
+
+            <!-- /top_menu -->
+    <!--        <a href="javascript:void(0)" class="open_close">-->
+    <!--            <i class="icon_menu text-white"></i><span>Menu</span>-->
+    <!--        </a>-->
+    <!--        <nav class="main-menu">-->
+    <!--            <div id="header_menu">-->
+    <!--                <a href="javascript:void(0)" class="open_close">-->
+    <!--                    <i class="icon_close"></i><span>Menu</span>-->
+    <!--                </a>-->
+    <!--                <a href="{{ route('homePage') }}"><img src="{{ asset('logo.png') }}" alt="" class="logo"></a>-->
+
+    <!--            </div>-->
+    <!--            <div class="nav-container">-->
+    <!--                <ul>-->
+    <!--                    <li><a href="{{ route('homePage') }}">Home</a></li>-->
+    <!--                    <li><a href="{{ route('listingPage') }}">Listing</a></li>-->
+
+    <!--                    <li class="submenu">-->
+    <!--                        <a href="#0" class="show-submenu">Other Page</a>-->
+    <!--                        <ul>-->
+    <!--                            <div>-->
+
+    <!--                                <li><a href="">404 Error</a></li>-->
+    <!--                                <li><a href="">Help and Faq</a></li>-->
+    <!--                                <li><a href="">Modal Login</a></li>-->
+    <!--                                <li><a href="">Modal Advertise</a></li>-->
+    <!--                                <li><a href="">Modal Newsletter</a></li>-->
+    <!--                                <li><a href="">Pricing Tables 1</a></li>-->
+    <!--                                <li><a href="">Pricing Tables 2</a></li>-->
+    <!--                                <li><a href="">Blog</a></li>-->
+    <!--                                <li><a href="">Contacts</a></li>-->
+    <!--                                <li><a href="" target="_blank">Coming Soon</a></li>-->
+    <!--                                <li><a href="">Login</a></li>-->
+    <!--                                <li><a href="">Register</a></li>-->
+    <!--                                <li><a href="">Icon Pack 1</a></li>-->
+    <!--                            </div>-->
+
+    <!--                            <div>-->
+
+    <!--                                <li><a href="">404 Error</a></li>-->
+    <!--                                <li><a href="">Help and Faq</a></li>-->
+    <!--                                <li><a href="">Modal Login</a></li>-->
+    <!--                                <li><a href="">Modal Advertise</a></li>-->
+    <!--                                <li><a href="">Modal Newsletter</a></li>-->
+    <!--                                <li><a href="">Pricing Tables 1</a></li>-->
+    <!--                                <li><a href="">Pricing Tables 2</a></li>-->
+    <!--                                <li><a href="">Blog</a></li>-->
+    <!--                                <li><a href="">Contacts</a></li>-->
+    <!--                                <li><a href="" target="_blank">Coming Soon</a></li>-->
+    <!--                                <li><a href="">Login</a></li>-->
+    <!--                                <li><a href="">Register</a></li>-->
+    <!--                                <li><a href="">Icon Pack 1</a></li>-->
+    <!--                            </div>-->
+
+
+    <!--                            <div>-->
+
+    <!--                                <li><a href="">404 Error</a></li>-->
+    <!--                                <li><a href="">Help and Faq</a></li>-->
+    <!--                                <li><a href="">Modal Login</a></li>-->
+    <!--                                <li><a href="">Modal Advertise</a></li>-->
+    <!--                                <li><a href="">Modal Newsletter</a></li>-->
+    <!--                                <li><a href="">Pricing Tables 1</a></li>-->
+    <!--                                <li><a href="">Pricing Tables 2</a></li>-->
+    <!--                                <li><a href="">Blog</a></li>-->
+    <!--                                <li><a href="">Contacts</a></li>-->
+    <!--                                <li><a href="" target="_blank">Coming Soon</a></li>-->
+    <!--                                <li><a href="">Login</a></li>-->
+    <!--                                <li><a href="">Register</a></li>-->
+    <!--                                <li><a href="">Icon Pack 1</a></li>-->
+    <!--                            </div>-->
+
+    <!--                            <div>-->
+
+    <!--                                <li><a href="">404 Error</a></li>-->
+    <!--                                <li><a href="">Help and Faq</a></li>-->
+    <!--                                <li><a href="">Modal Login</a></li>-->
+    <!--                                <li><a href="">Modal Advertise</a></li>-->
+    <!--                                <li><a href="">Modal Newsletter</a></li>-->
+    <!--                                <li><a href="">Pricing Tables 1</a></li>-->
+    <!--                                <li><a href="">Pricing Tables 2</a></li>-->
+    <!--                                <li><a href="">Blog</a></li>-->
+    <!--                                <li><a href="">Contacts</a></li>-->
+    <!--                                <li><a href="" target="_blank">Coming Soon</a></li>-->
+    <!--                                <li><a href="">Login</a></li>-->
+    <!--                                <li><a href="">Register</a></li>-->
+    <!--                                <li><a href="">Icon Pack 1</a></li>-->
+    <!--                            </div>-->
+
+    <!--                        </ul>-->
+    <!--                    </li>-->
+    <!--                </ul>-->
+
+
+    <!--                <span type="btn" class="btn btn-default" id="search-button">-->
+    <!--                    <i class="fa fa-search" aria-hidden="true" id="icon" onclick="open_search()" style="cursor:pointer;"></i>-->
+    <!--                </span>-->
+    <!--            </div>-->
+
+    <!--        </nav>-->
+    <!--    </div>-->
+    <!--</header>-->
+    <!-- /header -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {{-- @foreach ($popularCollege as $college)
+
+                {{-- {{ dd($college->city) }} --}}
+                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6">
+                    <div class="strip">
+                        <figure>
+                            <a href="#0" class="wish_bt"><i class="icon_heart"></i></a>
+                            @if ($college->featuredImage(true))
+                                <img src="/img/lazy-placeholder.png"
+                                data-src="{{ $college->featuredImage(true) ? asset($college->featuredImage(true)) : 'img/detail_placeholder.png' }}"
+                                class="img-fluid lazy" alt="{{ $college->name }}" />
+
+                                @else
+                                <img src="img/lazy-placeholder.png" data-src="{{ asset($college->image ?? 'img/lazy-placeholder.png') }}" class="img-fluid lazy" alt="">
+                            @endif
+
+
+
+                            <a href="{{ route('collegeDetail', ['college' => $college->slug]) }}" class="strip_info">
+                                <div class="item_title">
+                                    <h6 class="text-white">{{ $college->name }}</h6>
+
+                                    <small><i class="fa fa-map-marker" aria-hidden="true"></i> <span>
+                                            {{ $college->city->name }}
+                                        </span>
+                                        ,
+                                        <span> {{ $college->state->name }}
+                                        </span>
+                                    </small>
+                                </div>
+                            </a>
+                        </figure>
+                        {{-- <ul>
+                                    <li>
+                                        <a href="#0">
+                                            Admission
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#0">
+                                            Review
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#0">
+                                            College Fee
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <div class="score"><span>Superb<em>350 Reviews</em></span><strong>8.9</strong>
+                                        </div>
+                                    </li>
+                                </ul> --}}
+                    </div>
+                </div> --}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                // $(document).ready(function(){
+    //     search_trend();
+    // });
+    // function search_trend(){
+    //     $("#search_trending").css("display","block");
+    //     let _token = $("input[name=_token]").val();
+    //     var formData = {
+    //                 _token:_token
+    //         };
+    //     $.ajax({
+    //         type:"POST",
+    //             url:"{{route("search.trend")}}",
+    //             data:formData,
+    //             dataType: "json",
+    //             success:function(response){
+    //                 // console.log(response);
+    //                 var data = response;
+    //                 var lengthOfData = response.length;
+    //                 for(let i=0;i<lengthOfData;i++){
+    //                     const search_id = data[i]["search_id"];
+    //                     const search = data[i]["search"];
+    //                     $("#search_trends").append(`<tr class="text-center" onclick="search_trend_value(${search_id})"><td width="5%" class="text-right"><i class="fa fa-arrow-right" aria-hidden="true"></i></td><td width="95%" class="align-middle" id="trend_search-${search_id}">${search}</td></tr>`);
+    //                 }
+    //             }
+    //     })
+    // }
+    // function search_trend_value(id){
+    //     const search_id = id;
+    //     const search_name = $("#trend_search-"+search_id).text();
+    //     $("#search_id").val(search_name);
+    //         $("#search_college").submit();
+    // }
+    //     function search_list(search_value){
+    //     const searchValue = search_value;
+    //     let _token = $("input[name=_token]").val();
+    //     $("#search_items").empty();
+    //     if(searchValue == ""){
+    //         $("#search_trending").css("display","block");
+    //         $("#display_search").css("display","none");
+    //     }else{
+    //         $("#search_trending").css("display","none");
+    //         var formData = {
+    //                 search:searchValue,
+    //                 _token:_token
+    //         };
+    //         $.ajax({
+    //             type:"POST",
+    //             url:"{{route("search.list")}}",
+    //             data:formData,
+    //             dataType: "json",
+    //             success: function(result){
+    //                 $("#search_items").empty();
+    //                 $("#display_search").css("display","block");
+    //                 // console.log(result);
+    //                 // console.log(result.length);
+    //                 var data = result;
+    //                 var lengthOfData = result.length;
+    //                 for(let i=0;i<lengthOfData;i++){
+    //                     const id = data[i]["id"];
+    //                     const name = data[i]["name"];
+    //                     const type = data[i]["type"];
+    //                     const img_url = data[i]["img_url"];
+    //                         // $("#search_items").append("<a style="width:100%;height:40px;margin:5px 0px;" class="search_link" type="button" onclick="putInForm("+id+")"><img class="img-fluid rounded" src=""+img_url+"" alt=""+name+"" width="50">&nbsp;&nbsp;<span id="box-"+id+"">"+name+"</span></a>");
+    //                         $("#search_items").append(`<tr onclick="putInForm(${id})" class="text-center"><td width="5%"><img class="img-fluid" src=${img_url} alt="" width="50"></td><td id="box-${id}" width="80%" class="align-middle">${name}</td><td width="15%" class="align-middle">${type}</td></tr>`);
+    //                 }
+    //             }
+    //         });
+    //     }
+    // }
+    //     function putInForm(input_id){
+    //         const input_value = $("#box-"+input_id).text();
+    //         $("#search_id").val(input_value);
+    //         $("#search_college").submit();
+    //     }
+    //     function open_search(){
+    //         $("#search_college").css("display", "block");
+    //     }
+    //     function cancel_search(){
+    //         $("#search_id").val("");
+    //         $("#search_college").css("display", "none");
+    //     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     <!--{{-- <div class="col-lg-9">-->
+                <!--    <div class="row grid_sidebar college-list-container">-->
+                <!--        @foreach ($collegeListing as $collegeDetail)-->
+                <!--            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6">-->
+                <!--                <div class="strip">-->
+                <!--                    <figure>-->
+                <!--                        <img src="/img/lazy-placeholder.png"-->
+                <!--                            data-src="{{ $collegeDetail->featuredImage(true) ? asset($collegeDetail->featuredImage(true)) : 'img/lazy-placeholder.png' }}"-->
+                <!--                            class="img-fluid lazy" alt="{{ $collegeDetail->name }}" />-->
+                <!--                        <a href="{{ route('collegeDetail', ['college' => $collegeDetail->slug]) }}"-->
+                <!--                            class="strip_info">-->
+                <!--                            <div class="item_title">-->
+                <!--                                <h6 class="text-white">{{ $collegeDetail->name }} </h6>-->
+                <!--                                <small><i class="fa fa-map-marker" aria-hidden="true"></i>-->
+                <!--                                    <span>{{ $collegeDetail->city->name }}-->
+                <!--                                        ,-->
+                <!--                                        {{ $collegeDetail->state->name }}</span></small>-->
+                <!--                            </div>-->
+                <!--                        </a>-->
+                <!--                    </figure>-->
+                <!--                    <ul>-->
+                <!--                        {{-- <li>-->
+                <!--                            <div class="score"><span>Superb<em>350 Reviews</em></span><strong>8.9</strong>-->
+                <!--                            </div>-->
+                <!--                        </li> --}}-->
+                <!--                    </ul>-->
+                <!--                </div>-->
+                <!--            </div>-->
+                <!--        @endforeach-->
+                <!--    </div>-->
+
+                <!--    <div class="overlay__inner">-->
+                <!--        <div class="overlay__content"><span class="spinner"></span></div>-->
+                <!--    </div>-->
+                <!--</div> --}}-->

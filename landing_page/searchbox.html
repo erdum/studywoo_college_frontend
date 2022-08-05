@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="output.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+	<section id="closeSearchbox"
+	class="
+		hidden
+		absolute
+		top-0
+		left-0
+		w-screen
+		h-screen
+		z-10
+		bg-teal-800
+		text-white
+		text-md
+		flex
+		flex-col
+		items-start
+		justify-start
+		pt-4
+		pl-4
+		overflow-hidden
+
+		sm:pt-8
+		sm:pl-8
+	">
+		<div class="
+			w-full
+			flex
+			items-center
+			justify-end
+			px-4
+
+			md:px-8
+		"><i onclick="closeSearchbox(event);" class="fas fa-times text-3xl sm:text-5xl"></i>
+		</div>
+		<div class="
+			w-11/12
+			place-self-strech
+			flex
+			items-center
+			justify-start
+			text-lg
+			pb-2
+			my-8
+			border-b-2
+
+			sm:text-2xl
+		">
+			<i class="fas fa-search px-1 pr-2 md:pr-4"></i>
+			<input
+			oninput="handleSearch(event);"
+			type="text"
+			name="search"
+			placeholder="Search Colleges, Admissions..."
+			class="
+				w-full
+				bg-transparent
+				placeholder:text-white
+				focus:outline-none
+			">
+		</div>
+		<p id="popularSearch" class="text-neutral-400 mb-4">Popular Searches</p>
+		<div id="searchSuggestions" class="flex flex-col items-start justify-evenly sm:text-lg">
+			<div id="defaultSearches" class="flex flex-col items-start justify-evenly">
+				<a class="py-1" href="">CAT Exam</a>
+				<a class="py-1" href="">MBA</a>
+				<a class="py-1" href="">B.TECH</a>
+				<a class="py-1" href="">MBBS</a>
+			</div>
+			<div id="fetchedSearches" class="flex flex-col items-start justify-evenly">
+			</div>
+		</div>
+	</section>
+
+	<script type="text/javascript">
+		const closeSearchbox = (event) => {
+			const searchbox = document.getElementById('closeSearchbox').classList;
+			searchbox.remove('flex');
+			searchbox.add('hidden');
+			event.stopPropagation();
+		}
+
+		const openSearchbox = (event) => {
+			const searchbox = document.getElementById('closeSearchbox').classList;
+			searchbox.remove('hidden');
+			searchbox.add('flex');
+			event.stopPropagation();
+		};
+
+		const handleSearch = (event) => {
+			
+			if (event.target.value) {
+				setSearchSuggestions();
+				renderSearchSuggestions([{ title: 'test', link: 'from'}, { title: 'what', link: 'to'}])
+			} else {
+				setSearchSuggestions(true);
+			}
+
+			// send ajax(event.target.value);
+		};
+
+		const setSearchSuggestions = (state = false) => {
+			const popularSearch = document.getElementById('popularSearch');
+			const ds = document.getElementById('defaultSearches');
+			popularSearch.style.display = state ? 'block' : 'none';
+			ds.style.display = state ? 'flex' : 'none';
+		};
+
+		const renderSearchSuggestions = (data) => {
+			const fs = document.getElementById('fetchedSearches');
+			fs.innerHTML = "";
+			data.map((item) => {
+				const anc = document.createElement('a');
+				anc.classList.add('py-1');
+				anc.setAttribute('href', item.link);
+				anc.innerText = item.title;
+				fs.appendChild(anc);
+			});
+		};
+	</script>
+</body>
+</html>
